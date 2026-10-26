@@ -7,7 +7,7 @@ app.use(express.json())
 
 const CategorieRouter=require("./routes/categorie.route.js")
 //connexion a la base de données
-mongoose.connect(process.env.databaselocal)
+mongoose.connect(process.env.databasecloud)
 .then(() => {console.log("DataBase Successfully Connected");})
 .catch(err => { console.log("Unable to connect to database", err);
 process.exit(); });
